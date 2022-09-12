@@ -1,0 +1,19 @@
+[init]
+  defaultBranch = main
+
+[core]
+  editor = vi
+  excludesFile = ~/gitignore_global
+  trustctime = false
+  sshCommand = ssh -i {{ .identity } -F /dev/null
+
+[user]
+  name = {{ .name | quote }}
+  email = {{ .email | quote }}
+
+[includeIf ]
+
+[commit]
+  gpgsign = true
+[gpg]
+
