@@ -1,0 +1,6 @@
+# personal projects git config file
+
+[core]
+  sshCommand = ssh -i { .personal.identity } -F /dev/null
+[user]
+  email = {{ .personal.email | quote }}
