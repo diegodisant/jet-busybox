@@ -1,0 +1,8 @@
+#!/bin/bash
+
+zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+
+echo 'source ~/.gvm/scripts/gvm' >> ~/.zshrc
+
+gvm install go1.8
+gvm use go1.8

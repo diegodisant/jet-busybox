@@ -1,0 +1,13 @@
+#!/bin/bash
+
+keys=(
+  personal
+)
+
+if [-d "{{ .backupDir }}"]; then
+  for key in ${keys[@]}; do
+    gpg --import-options restore --import {{ .backupDir }}/git/gpg-keys/$key.gpg
+  done
+else
+  echo "[+] Error: GPG Restoration was skipped, the Backup directory doesn't exists"
+fi
